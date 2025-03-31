@@ -1,0 +1,61 @@
+Data sources:
+Flight Delay Data for U.S. Airports by Carrier (August 2013 - August 2023)
+
+    Source: Bureau of Transportation Statistics (Sri Harshar, Kaggle)
+
+    Description: This dataset provides detailed flight delay data for U.S. airports by carrier, covering the period from August 2013 to August 2023. It includes information on delays, cancellations, and various flight characteristics.
+
+    Link: https://www.kaggle.com/datasets/sriharshaeedala/airline-delay/data
+
+    Accessed: 2025-03-30
+
+NASA POWER API
+
+    Source: NASA Prediction Of Worldwide Energy Resources (POWER)
+
+    Description: The NASA POWER API provides meteorological and climatological data that can be used to analyze weather impacts on aviation and other industries. It includes variables such as temperature, wind, and precipitation.
+
+    Link: https://power.larc.nasa.gov
+
+    Accessed: 2025-03-30
+
+TranStats Database
+
+    Source: Bureau of Transportation Statistics (BTS)
+
+    Description: TranStats is a repository of transportation data provided by the BTS, offering a wide range of datasets on aviation, including airline performance, flight delays, and cancellations across the U.S.
+
+    Link: https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FMF&QO_fu146_anzr=Nv4%20Pn44vr45
+
+    Accessed: 2025-03-30
+
+Releasable Aircraft Registry Download
+
+    Source: Federal Aviation Administration (FAA)
+
+    Description: The FAA provides a downloadable dataset of the aircraft registry, containing details about aircraft in the U.S. that are available for public release. It includes information on aircraft type, ownership, and registration status.
+
+    Link: https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/releasable_aircraft_download
+
+    Accessed: 2025-03-30
+
+OurAirports Open Data
+
+    Source: OurAirports
+
+    Description: This open data source provides detailed information on airports worldwide, including locations, runways, and other relevant data. It is useful for analyzing the operational characteristics of airports in relation to flight delays.
+
+    Link: https://ourairports.com/data/
+
+    Accessed: 2025-03-30
+
+Airline Employment Data
+
+    Source: Bureau of Transportation Statistics (BTS)
+
+    Description: This dataset provides information on employment in the airline industry, including the number of employees by airline and related data on employment trends over time. It can be useful for analyzing how staffing levels correlate with delays and cancellations.
+
+    Link: https://www.transtats.bts.gov/employment/
+
+    Accessed: 2025-03-30
+
