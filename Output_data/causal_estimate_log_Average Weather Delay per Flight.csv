@@ -1,0 +1,256 @@
+Variable,Mean Estimate,Conditional Estimates
+Frost Days,-0.023865883928585685,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+      d                                                                         
+─────────────(E[Average Weather Delay per Flight|Months Away From June,Airport])
+d[Frost Days]                                                                   
+Estimand assumption 1, Unconfoundedness: If U→{Frost Days} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Frost Days,Months Away From June,Airport,U) = P(Average Weather Delay per Flight|Frost Days,Months Away From June,Airport)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Frost Days+Months Away From June+Airport+Frost Days*Temperature Max (2m)+Frost Days*Wind Speed Max (50m)+Frost Days*Snow Precipitation+Frost Days*Corrected Total Precipitation+Frost Days*Wind Speed (50m Average)+Frost Days*Temperature Min (2m)
+Target units: 
+
+## Estimate
+Mean value: -0.023865883928585685
+### Conditional Estimates
+__categorical__Temperature Max (2m)  __categorical__Wind Speed Max (50m)  __categorical__Snow Precipitation  __categorical__Corrected Total Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)
+(-19.421000000000003, 19.26]         (4.308999999999999, 9.5]             (-0.001, 0.34]                     (-0.001, 0.94]                                (1.949, 4.1]                             (-48.571, -7.1]                        0.007808
+                                                                                                                                                                                                    (-7.1, -0.42]                         -0.015852
+                                                                                                                                                                                                    (-0.42, 7.06]                         -0.027927
+                                                                                                                                                                                                    (7.06, 13.67]                         -0.037059
+                                                                                                                                                           (4.1, 4.91]                              (-48.571, -7.1]                        0.014253
+                                                                                                                                                                                                                                             ...   
+(33.72, 49.08]                       (15.72, 38.95]                       (0.34, 15.19]                      (0.94, 1.93]                                  (6.69, 13.75]                            (-48.571, -7.1]                       -0.007265
+                                                                                                                                                                                                    (-7.1, -0.42]                         -0.011292
+                                                                                                                                                                                                    (-0.42, 7.06]                         -0.015802
+                                                                                                             (1.93, 2.89]                                  (6.69, 13.75]                            (-7.1, -0.42]                         -0.016979
+                                                                                                                                                                                                    (-0.42, 7.06]                         -0.023579
+Length: 2545, dtype: float64"
+Snow Precipitation,-0.10595018283846036,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+          d                                                                    ↪
+─────────────────────(E[Average Weather Delay per Flight|Months Away From June ↪
+d[Snow Precipitation]                                                          ↪
+
+↪           
+↪ ,Airport])
+↪           
+Estimand assumption 1, Unconfoundedness: If U→{Snow Precipitation} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Snow Precipitation,Months Away From June,Airport,U) = P(Average Weather Delay per Flight|Snow Precipitation,Months Away From June,Airport)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Snow Precipitation+Months Away From June+Airport+Snow Precipitation*Temperature Max (2m)+Snow Precipitation*Wind Speed Max (50m)+Snow Precipitation*Frost Days+Snow Precipitation*Corrected Total Precipitation+Snow Precipitation*Wind Speed (50m Average)+Snow Precipitation*Temperature Min (2m)
+Target units: 
+
+## Estimate
+Mean value: -0.10595018283846036
+### Conditional Estimates
+__categorical__Temperature Max (2m)  __categorical__Wind Speed Max (50m)  __categorical__Frost Days  __categorical__Corrected Total Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)
+(-19.421000000000003, 19.26]         (4.308999999999999, 9.5]             (-0.001, 1.0]              (-0.001, 0.94]                                (1.949, 4.1]                             (-7.1, -0.42]                          0.020869
+                                                                                                                                                                                            (-0.42, 7.06]                          0.007390
+                                                                                                                                                                                            (7.06, 13.67]                         -0.097140
+                                                                                                                                                   (4.1, 4.91]                              (7.06, 13.67]                         -0.048401
+                                                                                                                                                   (4.91, 5.69]                             (7.06, 13.67]                         -0.021569
+                                                                                                                                                                                                                                     ...   
+(33.72, 49.08]                       (15.72, 38.95]                       (1.0, 17.0]                (0.94, 1.93]                                  (6.69, 13.75]                            (-7.1, -0.42]                          0.074678
+                                                                                                     (1.93, 2.89]                                  (5.69, 6.69]                             (-7.1, -0.42]                         -0.119217
+                                                                                                                                                   (6.69, 13.75]                            (-7.1, -0.42]                         -0.107308
+                                                                                                     (2.89, 4.2]                                   (6.69, 13.75]                            (-7.1, -0.42]                         -0.101523
+                                                                                                     (4.2, 32.15]                                  (6.69, 13.75]                            (-7.1, -0.42]                         -0.119848
+Length: 2669, dtype: float64"
+Corrected Total Precipitation,0.05544451212031842,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+               d                                                               ↪
+────────────────────────────────(E[Average Weather Delay per Flight|Months Awa ↪
+d[Corrected Total Precipitation]                                               ↪
+
+↪                      
+↪ y From June,Airport])
+↪                      
+Estimand assumption 1, Unconfoundedness: If U→{Corrected Total Precipitation} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Corrected Total Precipitation,Months Away From June,Airport,U) = P(Average Weather Delay per Flight|Corrected Total Precipitation,Months Away From June,Airport)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Corrected Total Precipitation+Months Away From June+Airport+Corrected Total Precipitation*Temperature Max (2m)+Corrected Total Precipitation*Wind Speed Max (50m)+Corrected Total Precipitation*Snow Precipitation+Corrected Total Precipitation*Frost Days+Corrected Total Precipitation*Wind Speed (50m Average)+Corrected Total Precipitation*Temperature Min (2m)
+Target units: 
+
+## Estimate
+Mean value: 0.05544451212031842
+### Conditional Estimates
+__categorical__Temperature Max (2m)  __categorical__Wind Speed Max (50m)  __categorical__Snow Precipitation  __categorical__Frost Days  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)
+(-19.421000000000003, 19.26]         (4.308999999999999, 9.5]             (-0.001, 0.34]                     (-0.001, 1.0]              (1.949, 4.1]                             (-7.1, -0.42]                          0.068908
+                                                                                                                                                                                 (-0.42, 7.06]                          0.066118
+                                                                                                                                                                                 (7.06, 13.67]                          0.074328
+                                                                                                                                        (4.1, 4.91]                              (7.06, 13.67]                          0.051072
+                                                                                                                                        (4.91, 5.69]                             (7.06, 13.67]                          0.027511
+                                                                                                                                                                                                                          ...   
+(33.72, 49.08]                       (15.72, 38.95]                       (0.34, 15.19]                      (-0.001, 1.0]              (6.69, 13.75]                            (-0.42, 7.06]                         -0.011968
+                                                                                                             (1.0, 17.0]                (5.69, 6.69]                             (-7.1, -0.42]                          0.033607
+                                                                                                                                                                                 (-0.42, 7.06]                          0.014762
+                                                                                                                                        (6.69, 13.75]                            (-48.571, -7.1]                        0.019031
+                                                                                                                                                                                 (-7.1, -0.42]                         -0.002711
+Length: 958, dtype: float64"
+Temperature Max (2m),-0.033900719099766885,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+           d                                                                   ↪
+───────────────────────(E[Average Weather Delay per Flight|Months Away From Ju ↪
+d[Temperature Max (2m)]                                                        ↪
+
+↪             
+↪ ne,Airport])
+↪             
+Estimand assumption 1, Unconfoundedness: If U→{Temperature Max (2m)} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Temperature Max (2m),Months Away From June,Airport,U) = P(Average Weather Delay per Flight|Temperature Max (2m),Months Away From June,Airport)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Temperature Max (2m)+Months Away From June+Airport+Temperature Max (2m)*Wind Speed Max (50m)+Temperature Max (2m)*Snow Precipitation+Temperature Max (2m)*Frost Days+Temperature Max (2m)*Wind Speed (50m Average)+Temperature Max (2m)*Temperature Min (2m)+Temperature Max (2m)*Corrected Total Precipitation
+Target units: 
+
+## Estimate
+Mean value: -0.033900719099766885
+### Conditional Estimates
+__categorical__Wind Speed Max (50m)  __categorical__Snow Precipitation  __categorical__Frost Days  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)  __categorical__Corrected Total Precipitation
+(4.308999999999999, 9.5]             (-0.001, 0.34]                     (-0.001, 1.0]              (1.949, 4.1]                             (-7.1, -0.42]                        (-0.001, 0.94]                                 -0.036884
+                                                                                                                                                                                 (0.94, 1.93]                                   -0.035875
+                                                                                                                                                                                 (1.93, 2.89]                                   -0.034991
+                                                                                                                                                                                 (2.89, 4.2]                                    -0.032809
+                                                                                                                                                                                 (4.2, 32.15]                                   -0.029420
+                                                                                                                                                                                                                                   ...   
+(15.72, 38.95]                       (0.34, 15.19]                      (17.0, 31.0]               (6.69, 13.75]                            (-7.1, -0.42]                        (-0.001, 0.94]                                 -0.050483
+                                                                                                                                                                                 (0.94, 1.93]                                   -0.046172
+                                                                                                                                                                                 (1.93, 2.89]                                   -0.043469
+                                                                                                                                                                                 (2.89, 4.2]                                    -0.033667
+                                                                                                                                                                                 (4.2, 32.15]                                   -0.010711
+Length: 1246, dtype: float64"
+Temperature Min (2m),0.0023671087326231355,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+           d                                                                   ↪
+───────────────────────(E[Average Weather Delay per Flight|Months Away From Ju ↪
+d[Temperature Min (2m)]                                                        ↪
+
+↪             
+↪ ne,Airport])
+↪             
+Estimand assumption 1, Unconfoundedness: If U→{Temperature Min (2m)} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Temperature Min (2m),Months Away From June,Airport,U) = P(Average Weather Delay per Flight|Temperature Min (2m),Months Away From June,Airport)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Temperature Min (2m)+Months Away From June+Airport+Temperature Min (2m)*Temperature Max (2m)+Temperature Min (2m)*Wind Speed Max (50m)+Temperature Min (2m)*Snow Precipitation+Temperature Min (2m)*Frost Days+Temperature Min (2m)*Wind Speed (50m Average)+Temperature Min (2m)*Corrected Total Precipitation
+Target units: 
+
+## Estimate
+Mean value: 0.0023671087326231355
+### Conditional Estimates
+__categorical__Temperature Max (2m)  __categorical__Wind Speed Max (50m)  __categorical__Snow Precipitation  __categorical__Frost Days  __categorical__Wind Speed (50m Average)  __categorical__Corrected Total Precipitation
+(-19.421000000000003, 19.26]         (4.308999999999999, 9.5]             (-0.001, 0.34]                     (-0.001, 1.0]              (1.949, 4.1]                             (-0.001, 0.94]                                 -0.002953
+                                                                                                                                                                                 (0.94, 1.93]                                    0.000747
+                                                                                                                                                                                 (1.93, 2.89]                                    0.003718
+                                                                                                                                                                                 (2.89, 4.2]                                     0.005737
+                                                                                                                                                                                 (4.2, 32.15]                                    0.016099
+                                                                                                                                                                                                                                   ...   
+(33.72, 49.08]                       (15.72, 38.95]                       (0.34, 15.19]                      (1.0, 17.0]                (5.69, 6.69]                             (-0.001, 0.94]                                 -0.007076
+                                                                                                                                                                                 (0.94, 1.93]                                    0.002388
+                                                                                                                                        (6.69, 13.75]                            (-0.001, 0.94]                                 -0.001364
+                                                                                                                                                                                 (0.94, 1.93]                                   -0.005357
+                                                                                                                                                                                 (1.93, 2.89]                                    0.001252
+Length: 1652, dtype: float64"
+Wind Speed (50m Average),-0.11842420556841904,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+             d                                                                 ↪
+───────────────────────────(E[Average Weather Delay per Flight|Months Away Fro ↪
+d[Wind Speed (50m Average)]                                                    ↪
+
+↪                 
+↪ m June,Airport])
+↪                 
+Estimand assumption 1, Unconfoundedness: If U→{Wind Speed (50m Average)} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Wind Speed (50m Average),Months Away From June,Airport,U) = P(Average Weather Delay per Flight|Wind Speed (50m Average),Months Away From June,Airport)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Wind Speed (50m Average)+Months Away From June+Airport+Wind Speed (50m Average)*Temperature Max (2m)+Wind Speed (50m Average)*Wind Speed Max (50m)+Wind Speed (50m Average)*Snow Precipitation+Wind Speed (50m Average)*Frost Days+Wind Speed (50m Average)*Temperature Min (2m)+Wind Speed (50m Average)*Corrected Total Precipitation
+Target units: 
+
+## Estimate
+Mean value: -0.11842420556841904
+### Conditional Estimates
+__categorical__Temperature Max (2m)  __categorical__Wind Speed Max (50m)  __categorical__Snow Precipitation  __categorical__Frost Days  __categorical__Temperature Min (2m)  __categorical__Corrected Total Precipitation
+(-19.421000000000003, 19.26]         (4.308999999999999, 9.5]             (-0.001, 0.34]                     (-0.001, 1.0]              (-7.1, -0.42]                        (-0.001, 0.94]                                 -0.134623
+                                                                                                                                                                             (2.89, 4.2]                                    -0.100523
+                                                                                                                                                                             (4.2, 32.15]                                   -0.052926
+                                                                                                                                        (-0.42, 7.06]                        (-0.001, 0.94]                                 -0.127668
+                                                                                                                                                                             (0.94, 1.93]                                   -0.119790
+                                                                                                                                                                                                                               ...   
+(33.72, 49.08]                       (15.72, 38.95]                       (0.34, 15.19]                      (1.0, 17.0]                (-48.571, -7.1]                      (0.94, 1.93]                                   -0.126120
+                                                                                                                                        (-7.1, -0.42]                        (-0.001, 0.94]                                 -0.155382
+                                                                                                                                                                             (0.94, 1.93]                                   -0.147436
+                                                                                                                                                                             (1.93, 2.89]                                   -0.128701
+                                                                                                                                        (-0.42, 7.06]                        (0.94, 1.93]                                   -0.142518
+Length: 1108, dtype: float64"
+Wind Speed Max (50m),-0.010142964011243483,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+           d                                                                   ↪
+───────────────────────(E[Average Weather Delay per Flight|Months Away From Ju ↪
+d[Wind Speed Max (50m)]                                                        ↪
+
+↪             
+↪ ne,Airport])
+↪             
+Estimand assumption 1, Unconfoundedness: If U→{Wind Speed Max (50m)} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Wind Speed Max (50m),Months Away From June,Airport,U) = P(Average Weather Delay per Flight|Wind Speed Max (50m),Months Away From June,Airport)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Wind Speed Max (50m)+Months Away From June+Airport+Wind Speed Max (50m)*Temperature Max (2m)+Wind Speed Max (50m)*Snow Precipitation+Wind Speed Max (50m)*Frost Days+Wind Speed Max (50m)*Wind Speed (50m Average)+Wind Speed Max (50m)*Temperature Min (2m)+Wind Speed Max (50m)*Corrected Total Precipitation
+Target units: 
+
+## Estimate
+Mean value: -0.010142964011243483
+### Conditional Estimates
+__categorical__Temperature Max (2m)  __categorical__Snow Precipitation  __categorical__Frost Days  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)  __categorical__Corrected Total Precipitation
+(-19.421000000000003, 19.26]         (-0.001, 0.34]                     (-0.001, 1.0]              (1.949, 4.1]                             (-7.1, -0.42]                        (-0.001, 0.94]                                 -0.003972
+                                                                                                                                                                                 (2.89, 4.2]                                     0.006790
+                                                                                                                                                                                 (4.2, 32.15]                                    0.023903
+                                                                                                                                            (-0.42, 7.06]                        (-0.001, 0.94]                                 -0.006446
+                                                                                                                                                                                 (0.94, 1.93]                                   -0.002316
+                                                                                                                                                                                                                                   ...   
+(33.72, 49.08]                       (0.34, 15.19]                      (1.0, 17.0]                (5.69, 6.69]                             (-0.42, 7.06]                        (1.93, 2.89]                                   -0.020728
+                                                                                                   (6.69, 13.75]                            (-48.571, -7.1]                      (0.94, 1.93]                                   -0.026417
+                                                                                                                                            (-7.1, -0.42]                        (-0.001, 0.94]                                 -0.036019
+                                                                                                                                                                                 (0.94, 1.93]                                   -0.034944
+                                                                                                                                                                                 (1.93, 2.89]                                   -0.024317
+Length: 1117, dtype: float64"

@@ -1,0 +1,232 @@
+Variable,Mean Estimate,Conditional Estimates
+Frost Days,0.03879884834242464,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+      d                             
+─────────────(E[Arriving Cancelled])
+d[Frost Days]                       
+Estimand assumption 1, Unconfoundedness: If U→{Frost Days} and U→Arriving Cancelled then P(Arriving Cancelled|Frost Days,,U) = P(Arriving Cancelled|Frost Days,)
+
+## Realized estimand
+b: Arriving Cancelled~Frost Days+Frost Days*Wind Speed Max (50m)+Frost Days*Corrected Total Precipitation+Frost Days*Snow Precipitation+Frost Days*Wind Speed (50m Average)+Frost Days*Temperature Min (2m)+Frost Days*Temperature Max (2m)
+Target units: 
+
+## Estimate
+Mean value: 0.03879884834242464
+### Conditional Estimates
+__categorical__Wind Speed Max (50m)  __categorical__Corrected Total Precipitation  __categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)  __categorical__Temperature Max (2m)
+(4.308999999999999, 9.5]             (-0.001, 0.94]                                (-0.001, 0.34]                     (1.949, 4.1]                             (-48.571, -7.1]                      (-19.421000000000003, 19.26]          -0.237325
+                                                                                                                                                                                                    (19.26, 25.58]                        -0.135549
+                                                                                                                                                               (-7.1, -0.42]                        (-19.421000000000003, 19.26]          -0.250700
+                                                                                                                                                                                                    (19.26, 25.58]                        -0.183664
+                                                                                                                                                                                                    (25.58, 29.73]                        -0.110104
+                                                                                                                                                                                                                                             ...   
+(15.72, 38.95]                       (4.2, 32.15]                                  (0.34, 15.19]                      (6.69, 13.75]                            (-7.1, -0.42]                        (19.26, 25.58]                         0.289731
+                                                                                                                                                                                                    (25.58, 29.73]                         0.272400
+                                                                                                                                                                                                    (29.73, 33.72]                         0.430290
+                                                                                                                                                               (-0.42, 7.06]                        (-19.421000000000003, 19.26]           0.192279
+                                                                                                                                                                                                    (25.58, 29.73]                         0.319511
+Length: 2545, dtype: float64"
+Snow Precipitation,4.553318990997134,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+          d                                 
+─────────────────────(E[Arriving Cancelled])
+d[Snow Precipitation]                       
+Estimand assumption 1, Unconfoundedness: If U→{Snow Precipitation} and U→Arriving Cancelled then P(Arriving Cancelled|Snow Precipitation,,U) = P(Arriving Cancelled|Snow Precipitation,)
+
+## Realized estimand
+b: Arriving Cancelled~Snow Precipitation+Snow Precipitation*Wind Speed Max (50m)+Snow Precipitation*Corrected Total Precipitation+Snow Precipitation*Wind Speed (50m Average)+Snow Precipitation*Temperature Min (2m)+Snow Precipitation*Temperature Max (2m)+Snow Precipitation*Frost Days
+Target units: 
+
+## Estimate
+Mean value: 4.553318990997134
+### Conditional Estimates
+__categorical__Wind Speed Max (50m)  __categorical__Corrected Total Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)  __categorical__Temperature Max (2m)  __categorical__Frost Days
+(4.308999999999999, 9.5]             (-0.001, 0.94]                                (1.949, 4.1]                             (-48.571, -7.1]                      (-19.421000000000003, 19.26]         (1.0, 17.0]                  2.135095
+                                                                                                                                                                                                      (17.0, 31.0]                 0.213074
+                                                                                                                                                                 (19.26, 25.58]                       (1.0, 17.0]                  3.192147
+                                                                                                                                                                                                      (17.0, 31.0]                 2.796639
+                                                                                                                            (-7.1, -0.42]                        (-19.421000000000003, 19.26]         (-0.001, 1.0]                2.092687
+                                                                                                                                                                                                                                     ...   
+(15.72, 38.95]                       (4.2, 32.15]                                  (6.69, 13.75]                            (7.06, 13.67]                        (33.72, 49.08]                       (-0.001, 1.0]                7.619372
+                                                                                                                            (13.67, 29.31]                       (19.26, 25.58]                       (-0.001, 1.0]                5.368658
+                                                                                                                                                                 (25.58, 29.73]                       (-0.001, 1.0]                5.865371
+                                                                                                                                                                 (29.73, 33.72]                       (-0.001, 1.0]                5.818887
+                                                                                                                                                                 (33.72, 49.08]                       (-0.001, 1.0]                6.576404
+Length: 2669, dtype: float64"
+Corrected Total Precipitation,0.5555188987728625,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+               d                                       
+────────────────────────────────(E[Arriving Cancelled])
+d[Corrected Total Precipitation]                       
+Estimand assumption 1, Unconfoundedness: If U→{Corrected Total Precipitation} and U→Arriving Cancelled then P(Arriving Cancelled|Corrected Total Precipitation,,U) = P(Arriving Cancelled|Corrected Total Precipitation,)
+
+## Realized estimand
+b: Arriving Cancelled~Corrected Total Precipitation+Corrected Total Precipitation*Wind Speed Max (50m)+Corrected Total Precipitation*Snow Precipitation+Corrected Total Precipitation*Wind Speed (50m Average)+Corrected Total Precipitation*Temperature Min (2m)+Corrected Total Precipitation*Temperature Max (2m)+Corrected Total Precipitation*Frost Days
+Target units: 
+
+## Estimate
+Mean value: 0.5555188987728625
+### Conditional Estimates
+__categorical__Wind Speed Max (50m)  __categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)  __categorical__Temperature Max (2m)  __categorical__Frost Days
+(4.308999999999999, 9.5]             (-0.001, 0.34]                     (1.949, 4.1]                             (-48.571, -7.1]                      (-19.421000000000003, 19.26]         (1.0, 17.0]                 -0.165862
+                                                                                                                                                                                           (17.0, 31.0]                 0.228500
+                                                                                                                                                      (19.26, 25.58]                       (1.0, 17.0]                 -0.098695
+                                                                                                                                                                                           (17.0, 31.0]                 0.346957
+                                                                                                                                                      (25.58, 29.73]                       (1.0, 17.0]                  0.015020
+                                                                                                                                                                                                                          ...   
+(15.72, 38.95]                       (0.34, 15.19]                      (6.69, 13.75]                            (-0.42, 7.06]                        (-19.421000000000003, 19.26]         (-0.001, 1.0]                1.026004
+                                                                                                                                                                                           (1.0, 17.0]                  2.075792
+                                                                                                                                                      (25.58, 29.73]                       (-0.001, 1.0]                1.032026
+                                                                                                                                                      (29.73, 33.72]                       (-0.001, 1.0]                1.212668
+                                                                                                                                                      (33.72, 49.08]                       (-0.001, 1.0]                1.551034
+Length: 958, dtype: float64"
+Temperature Max (2m),0.01277907155309066,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+           d                                  
+───────────────────────(E[Arriving Cancelled])
+d[Temperature Max (2m)]                       
+Estimand assumption 1, Unconfoundedness: If U→{Temperature Max (2m)} and U→Arriving Cancelled then P(Arriving Cancelled|Temperature Max (2m),,U) = P(Arriving Cancelled|Temperature Max (2m),)
+
+## Realized estimand
+b: Arriving Cancelled~Temperature Max (2m)+Temperature Max (2m)*Wind Speed Max (50m)+Temperature Max (2m)*Corrected Total Precipitation+Temperature Max (2m)*Snow Precipitation+Temperature Max (2m)*Wind Speed (50m Average)+Temperature Max (2m)*Temperature Min (2m)+Temperature Max (2m)*Frost Days
+Target units: 
+
+## Estimate
+Mean value: 0.01277907155309066
+### Conditional Estimates
+__categorical__Wind Speed Max (50m)  __categorical__Corrected Total Precipitation  __categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)  __categorical__Frost Days
+(4.308999999999999, 9.5]             (-0.001, 0.94]                                (-0.001, 0.34]                     (1.949, 4.1]                             (-48.571, -7.1]                      (1.0, 17.0]                 -0.114200
+                                                                                                                                                                                                    (17.0, 31.0]                -0.230366
+                                                                                                                                                               (-7.1, -0.42]                        (-0.001, 1.0]               -0.115963
+                                                                                                                                                                                                    (1.0, 17.0]                 -0.125444
+                                                                                                                                                                                                    (17.0, 31.0]                -0.203841
+                                                                                                                                                                                                                                   ...   
+(15.72, 38.95]                       (4.2, 32.15]                                  (0.34, 15.19]                      (6.69, 13.75]                            (-7.1, -0.42]                        (-0.001, 1.0]                0.372708
+                                                                                                                                                                                                    (1.0, 17.0]                  0.271580
+                                                                                                                                                                                                    (17.0, 31.0]                 0.712798
+                                                                                                                                                               (-0.42, 7.06]                        (-0.001, 1.0]                0.244982
+                                                                                                                                                                                                    (1.0, 17.0]                  0.615256
+Length: 1246, dtype: float64"
+Temperature Min (2m),-0.04081695378720429,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+           d                                  
+───────────────────────(E[Arriving Cancelled])
+d[Temperature Min (2m)]                       
+Estimand assumption 1, Unconfoundedness: If U→{Temperature Min (2m)} and U→Arriving Cancelled then P(Arriving Cancelled|Temperature Min (2m),,U) = P(Arriving Cancelled|Temperature Min (2m),)
+
+## Realized estimand
+b: Arriving Cancelled~Temperature Min (2m)+Temperature Min (2m)*Wind Speed Max (50m)+Temperature Min (2m)*Corrected Total Precipitation+Temperature Min (2m)*Snow Precipitation+Temperature Min (2m)*Wind Speed (50m Average)+Temperature Min (2m)*Temperature Max (2m)+Temperature Min (2m)*Frost Days
+Target units: 
+
+## Estimate
+Mean value: -0.04081695378720429
+### Conditional Estimates
+__categorical__Wind Speed Max (50m)  __categorical__Corrected Total Precipitation  __categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Max (2m)  __categorical__Frost Days
+(4.308999999999999, 9.5]             (-0.001, 0.94]                                (-0.001, 0.34]                     (1.949, 4.1]                             (-19.421000000000003, 19.26]         (-0.001, 1.0]               -0.015134
+                                                                                                                                                                                                    (1.0, 17.0]                  0.039647
+                                                                                                                                                                                                    (17.0, 31.0]                 0.108902
+                                                                                                                                                               (19.26, 25.58]                       (-0.001, 1.0]               -0.021716
+                                                                                                                                                                                                    (1.0, 17.0]                 -0.010915
+                                                                                                                                                                                                                                   ...   
+(15.72, 38.95]                       (4.2, 32.15]                                  (0.34, 15.19]                      (6.69, 13.75]                            (19.26, 25.58]                       (1.0, 17.0]                 -0.117833
+                                                                                                                                                                                                    (17.0, 31.0]                -0.107700
+                                                                                                                                                               (25.58, 29.73]                       (-0.001, 1.0]               -0.145865
+                                                                                                                                                                                                    (1.0, 17.0]                 -0.087040
+                                                                                                                                                               (29.73, 33.72]                       (-0.001, 1.0]               -0.246699
+Length: 1652, dtype: float64"
+Wind Speed (50m Average),0.23445116149809664,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+             d                                    
+───────────────────────────(E[Arriving Cancelled])
+d[Wind Speed (50m Average)]                       
+Estimand assumption 1, Unconfoundedness: If U→{Wind Speed (50m Average)} and U→Arriving Cancelled then P(Arriving Cancelled|Wind Speed (50m Average),,U) = P(Arriving Cancelled|Wind Speed (50m Average),)
+
+## Realized estimand
+b: Arriving Cancelled~Wind Speed (50m Average)+Wind Speed (50m Average)*Wind Speed Max (50m)+Wind Speed (50m Average)*Corrected Total Precipitation+Wind Speed (50m Average)*Snow Precipitation+Wind Speed (50m Average)*Temperature Min (2m)+Wind Speed (50m Average)*Temperature Max (2m)+Wind Speed (50m Average)*Frost Days
+Target units: 
+
+## Estimate
+Mean value: 0.23445116149809664
+### Conditional Estimates
+__categorical__Wind Speed Max (50m)  __categorical__Corrected Total Precipitation  __categorical__Snow Precipitation  __categorical__Temperature Min (2m)  __categorical__Temperature Max (2m)  __categorical__Frost Days
+(4.308999999999999, 9.5]             (-0.001, 0.94]                                (-0.001, 0.34]                     (-48.571, -7.1]                      (-19.421000000000003, 19.26]         (1.0, 17.0]                 -0.252027
+                                                                                                                                                                                                (17.0, 31.0]                -0.410823
+                                                                                                                                                           (19.26, 25.58]                       (1.0, 17.0]                 -0.179690
+                                                                                                                                                                                                (17.0, 31.0]                -0.313582
+                                                                                                                      (-7.1, -0.42]                        (-19.421000000000003, 19.26]         (-0.001, 1.0]               -0.378233
+                                                                                                                                                                                                                               ...   
+(15.72, 38.95]                       (4.2, 32.15]                                  (0.34, 15.19]                      (-7.1, -0.42]                        (29.73, 33.72]                       (-0.001, 1.0]                1.221480
+                                                                                                                                                                                                (1.0, 17.0]                  0.963221
+                                                                                                                      (-0.42, 7.06]                        (-19.421000000000003, 19.26]         (-0.001, 1.0]                1.053259
+                                                                                                                                                                                                (1.0, 17.0]                  1.436434
+                                                                                                                                                           (25.58, 29.73]                       (-0.001, 1.0]                0.915316
+Length: 1108, dtype: float64"
+Wind Speed Max (50m),0.4549382713646557,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+           d                                  
+───────────────────────(E[Arriving Cancelled])
+d[Wind Speed Max (50m)]                       
+Estimand assumption 1, Unconfoundedness: If U→{Wind Speed Max (50m)} and U→Arriving Cancelled then P(Arriving Cancelled|Wind Speed Max (50m),,U) = P(Arriving Cancelled|Wind Speed Max (50m),)
+
+## Realized estimand
+b: Arriving Cancelled~Wind Speed Max (50m)+Wind Speed Max (50m)*Corrected Total Precipitation+Wind Speed Max (50m)*Snow Precipitation+Wind Speed Max (50m)*Wind Speed (50m Average)+Wind Speed Max (50m)*Temperature Min (2m)+Wind Speed Max (50m)*Temperature Max (2m)+Wind Speed Max (50m)*Frost Days
+Target units: 
+
+## Estimate
+Mean value: 0.4549382713646557
+### Conditional Estimates
+__categorical__Corrected Total Precipitation  __categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Min (2m)  __categorical__Temperature Max (2m)  __categorical__Frost Days
+(-0.001, 0.94]                                (-0.001, 0.34]                     (1.949, 4.1]                             (-48.571, -7.1]                      (-19.421000000000003, 19.26]         (1.0, 17.0]                  0.340045
+                                                                                                                                                                                                    (17.0, 31.0]                 0.291462
+                                                                                                                                                               (19.26, 25.58]                       (1.0, 17.0]                  0.340074
+                                                                                                                                                                                                    (17.0, 31.0]                 0.312599
+                                                                                                                                                               (25.58, 29.73]                       (1.0, 17.0]                  0.344182
+                                                                                                                                                                                                                                   ...   
+(4.2, 32.15]                                  (0.34, 15.19]                      (6.69, 13.75]                            (-7.1, -0.42]                        (29.73, 33.72]                       (-0.001, 1.0]                0.672892
+                                                                                                                          (-0.42, 7.06]                        (-19.421000000000003, 19.26]         (-0.001, 1.0]                0.601709
+                                                                                                                                                                                                    (1.0, 17.0]                  0.577211
+                                                                                                                                                               (25.58, 29.73]                       (-0.001, 1.0]                0.587694
+                                                                                                                                                               (29.73, 33.72]                       (-0.001, 1.0]                0.670755
+Length: 1117, dtype: float64"
